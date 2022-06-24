@@ -1,0 +1,122 @@
+Outgoing from submmission Milestone 1 as V1:
+V1.0
+- Base Demo/Features for milesone 1 completed
+________________________________________________
+
+V1.1 (09.Feb.2020)
+- Changed code structure to mimic Session 3 "EventsDemo" file
+________________________________________________
+
+V1.2 (13.Feb.2020)
+- All platforms are passed into a arraylist
+which gets passed into Controlplatform.java.
+(changes made in Controlplatform.java to accomodate this)
+
+- Moved addsteplistener for platform control, from loop creating the platforms and platform sensors, out of GameWorld.java to Game.java.
+(in order to have only 1 steplistener for platform control)
+
+.1 Game.java line56:
+changed:this.view = new UserView(world, 500, 500);
+to: 	this.view = new MyView(world, 500, 500, world.getProjectile());
+
+.1 Added class MyView to add UI(level/launches/strength indicator) and background
+
+
+________________________________________________
+
+V1.3 (20.Feb.2020)
+
+- MyView.java: Changed grafics for the strength bar and added background when powerup is picked up
+
+- MyView.java/ControlPlatform.java/Launcher.java: Limited launchstrength added public Vec2 GetLaunch() in Launcher.java to define max size
+	for mouse coordinates to be used in projectile.applyforce(line 52)
+________________________________________________
+________________________________________________
+
+V2.0 (20.Feb.2020)
+
+- Restructured code to match structure of Session 5's levels demo
+________________________________________________
+
+V2.1 (21.Feb.2020)
+
+- Added level 1
+
+.1 Fixed Issue of Launch and boostflag not updating(resulting in graphical error
+________________________________________________
+
+V2.2 (22.Feb.2020)
+
+- Changed PowerUp from static to walker
+
+.1 Added arrays for the PowerUp and DeathWalls object
+
+.2 Added PowerUps array into tracker to limit the maximum velocity
+
+.3 changed KillPlayer.java so it reloads the level instead of only reseting player position
+________________________________________________
+
+V3.0 (22.Feb.2020)
+
+- Added Button: Pause,Reset,Swap + events
+
+.1 Fixed glitching when repeatedly pressing the Pause and Reset button
+Fixed by changing parameters going into changelog and Pause-/Resetaction.java
+
+.2 Fixed issued of Swap button not affecting the projectile properly (was an addressing issue)
+Fixed by passing Gamelevel as a parameter and adding setbuttonToWorld function to update the Swap button to the
+new Gamelevel world that is being loaded
+
+________________________________________________
+V3.1 (05.Mar.2020)
+
+- Changed Cloud object from Staticbody to walker
+
+.1 added class bouncer to avoid repetition of creating balls in level 1
+
+.2 added arraylists for Bouncer and respective getter for it and cloud
+
+.3 Fixed amount of collisiondetection instances for GoalReached event to increment in every instance of a new level
+(fixed by adding variable "cloudlistener" in Gamelevel that can be removed and recreated to avoid duplication)
+
+.4 Added 2 backgrounds, one for Level 2 and one for level 3 (Level 2 Complete)
+
+.5 Fixed more event instances to increments in number every game.gonextlevel call
+
+.6 Made cloud change behaviour from static to dynamic in level 2
+________________________________________________
+
+V3.2 (05.Mar.2020)
+
+- Started and Finished level 3
+________________________________________________
+
+V3.3 (06.Mar.2020)
+
+- Added new Image for Bouncer object
+
+- Renamed Bouncer object to Bumper (respective name change of arraylist variable "bouncers" to "bumpers" aswell as function name change
+from "getBouncers" to "getBumpers"
+
+.1 Increased height of platformsensor shape
+
+Removed "Obsolete" folder and unused sprites from "data" folder
+Made an executable Jar file located in "MyGame/out/artifacts/BasicDemo_jar/BasicDemo.jar"
+(note: jar fix executable not starting up)
+
+.2 Added sfx to buttons, launching and upon player deathwall collision
+
+________________________________________________
+
+V3.4 (07.Mar.2020)
+
+- Made buttons without intelij GUI layout manager and replaced previously made buttons with it
+
+.x fixed issue of player moving seperate from moving platform
+.x Changed code structure for loading images to match example in Lecture 5
+________________________________________________
+
+V1.9 ()
+________________________________________________
+
+V

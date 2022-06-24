@@ -1,0 +1,20 @@
+Project by:
+Nathan Odibo
+
+Original Code used as the Base:
+Basic Demo
+
+Modified By:
+Nathan Odibo
+
+
+Sprites obtained from:
+https://www.mariowiki.com/Gallery:Super_Mario_Maker_sprites#Super_Mario_Bros.
+(Obviously i hold no rights to the
+images used in this Project.)
+
+
+
+Regarding MileStone 1:
+A the top of the main class "Game.java"
+there is A commented section with a brief overview on how I achieved the different requirements.
